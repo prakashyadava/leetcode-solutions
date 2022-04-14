@@ -38,16 +38,9 @@ public:
                     q.push(NULL);
                 }
             }
-            while(!q.empty()){
-                if(q.front()!=NULL){
-                    tmp.push_back(q.front()->val);
-                    q.pop();
-                }
-                q.pop();
-            }
+            ans.push_back(tmp);
         }
-        if(tmp.size()!=0)
-        ans.push_back(tmp);
+        
         return ans;
         
     }
