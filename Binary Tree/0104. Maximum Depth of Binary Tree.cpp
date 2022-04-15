@@ -42,3 +42,20 @@ public:
         return ans.size();
     }
 };
+// 2nd solution
+class Solution {
+public:
+    int treeHeight(TreeNode* root){
+        if(root!=NULL){
+            int lh = treeHeight(root->left);
+            int rh = treeHeight(root->right);
+            
+            return max(lh,rh) +1;
+        }
+        return 0;
+    }
+    int maxDepth(TreeNode* root) {
+        
+        return treeHeight(root);
+    }
+};
